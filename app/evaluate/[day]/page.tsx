@@ -17,26 +17,33 @@ export default function EvaluateDay() {
   const [scores, setScores] = useState<Record<string, Record<string, number>>>({})
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
+  const [username, setUsername] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchScores = async () => {
-      try {
-        const response = await fetch("/api/scores")
-        if (!response.ok) {
-          throw new Error("Failed to fetch scores")
-        }
-        const data = await response.json()
-        setScores(data[`day${day}`] || initializeScores())
-      } catch (error) {
-        console.error("Error fetching scores:", error)
-        setScores(initializeScores())
-      } finally {
-        setIsLoading(false)
-      }
+    const storedUsername = localStorage.getItem("username")
+    if (!storedUsername) {
+      router.push("/signin")
+    } else {
+      setUsername(storedUsername)
+      fetchScores(storedUsername)
     }
+  }, [username, router]) // Removed unnecessary 'day' dependency
 
-    fetchScores()
-  }, [day])
+  const fetchScores = async (username: string) => {
+    try {
+      const response = await fetch(`/api/scores?day=${day}&username=${username}`)
+      if (!response.ok) {
+        throw new Error("Failed to fetch scores")
+      }
+      const data = await response.json()
+      setScores(data || initializeScores())
+    } catch (error) {
+      console.error("Error fetching scores:", error)
+      setScores(initializeScores())
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const initializeScores = () => {
     const initialScores: Record<string, Record<string, number>> = {}
@@ -60,6 +67,8 @@ export default function EvaluateDay() {
   }
 
   const handleSubmit = async () => {
+    if (!username) return
+
     setIsSaving(true)
     try {
       const response = await fetch("/api/scores", {
@@ -67,7 +76,7 @@ export default function EvaluateDay() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ [`day${day}`]: scores }),
+        body: JSON.stringify({ day, username, scores }),
       })
       if (!response.ok) {
         throw new Error("Failed to save scores")
@@ -111,7 +120,7 @@ export default function EvaluateDay() {
                     </SelectTrigger>
                     <SelectContent>
                       {[...Array(11)].map((_, i) => (
-                        <SelectItem className="cursor-pointer" key={i} value={i.toString()}>
+                        <SelectItem key={i} value={i.toString()}>
                           {i}
                         </SelectItem>
                       ))}

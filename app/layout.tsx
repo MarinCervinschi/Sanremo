@@ -1,9 +1,13 @@
-import "./globals.css"
+"use client"
+import './globals.css'
 import { Inter, Azeret_Mono as Geist_Mono } from "next/font/google"
 import { ThemeProvider } from "@components/theme-provider"
 import { ModeToggle } from "@components/mode-toggle"
 import Link from "next/link"
 import type React from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { Button } from "@components/ui/button"
 
 const geistSans = Inter({
   subsets: ["latin"],
@@ -14,12 +18,25 @@ const geistMono = Geist_Mono({
   variable: "--font-mono",
 })
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const [username, setUsername] = useState<string | null>(null)
+  const router = useRouter()
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username")
+    setUsername(storedUsername)
+  }, [])
+
+  const handleSignOut = () => {
+    localStorage.removeItem("username")
+    setUsername(null)
+    router.push("/signin")
+  }
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
@@ -33,15 +50,29 @@ export default function RootLayout({
                   </Link>
                 </div>
                 <div className="flex items-center">
-                  <Link href="/" className="text-sm font-medium mr-4">
-                    Home
-                  </Link>
-                  <Link href="/days" className="text-sm font-medium mr-4">
-                    Days
-                  </Link>
-                  <Link href="/results" className="text-sm font-medium mr-4">
-                    Results
-                  </Link>
+                  {username ? (
+                    <>
+                      <Link href="/days" className="text-sm font-medium mr-4">
+                        Days
+                      </Link>
+                      <Link href="/results" className="text-sm font-medium mr-4">
+                        Results
+                      </Link>
+                      <span className="mr-4">Welcome, {username}!</span>
+                      <Button onClick={handleSignOut} variant="outline" size="sm">
+                        Sign Out
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Link href="/signin" className="text-sm font-medium mr-4">
+                        Sign In
+                      </Link>
+                      <Link href="/signup" className="text-sm font-medium mr-4">
+                        Sign Up
+                      </Link>
+                    </>
+                  )}
                   <ModeToggle />
                 </div>
               </div>

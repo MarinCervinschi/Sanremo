@@ -1,270 +1,293 @@
 {
-  "day1": {
-    "Artist 1": {
-      "Performance": 1,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 2": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 3": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 4": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 5": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 6": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 7": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 8": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 9": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 10": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 11": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 12": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 13": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 14": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 15": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 16": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 17": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 18": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 19": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 20": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 21": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 22": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 23": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 24": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 25": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 26": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 27": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 28": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Artist 29": {
-      "Performance": 0,
-      "Outfit": 0,
-      "Stage Presence": 0,
-      "Vocal Ability": 0,
-      "Creativity": 0
-    },
-    "Gaia - Chiamo io chiami tu": {
-      "Performance": 8,
-      "Outfit": 4,
-      "Stage Presence": 9,
-      "Vocal Ability": 9,
-      "Creativity": 5
-    },
-    "Francesco Gabbani - Viva la vita": {
-      "Performance": 8,
-      "Outfit": 6,
-      "Stage Presence": 7,
-      "Vocal Ability": 9,
-      "Creativity": 7
-    },
-    "Rkomi - Il ritmo delle cose": {
-      "Performance": 5,
-      "Outfit": 5,
-      "Stage Presence": 6,
-      "Vocal Ability": 2,
-      "Creativity": 4
-    },
-    "Noemi - Se t'innamori muori": {
-      "Performance": 9,
-      "Outfit": 10,
-      "Stage Presence": 9,
-      "Vocal Ability": 10,
-      "Creativity": 8
-    },
-    "Irama - Lentamente": {
-      "Performance": 7,
-      "Outfit": 8,
-      "Stage Presence": 6,
-      "Vocal Ability": 7,
-      "Creativity": 7
-    },
-    "Coma_Cose - Cuoricini": {
-      "Performance": 9,
-      "Outfit": 5,
-      "Stage Presence": 8,
-      "Vocal Ability": 9,
-      "Creativity": 8
-    },
-    "Simone Cristicchi - Quando sarai piccola": {
-      "Performance": 2,
-      "Outfit": 2,
-      "Stage Presence": 2,
-      "Vocal Ability": 3,
-      "Creativity": 2
-    },
-    "Marcella Bella - Pelle diamante": {
-      "Outfit": 4,
-      "Stage Presence": 8,
-      "Vocal Ability": 8,
-      "Creativity": 6,
-      "Performance": 7
-    },
-    "Achille Lauro - Incoscienti giovani": {
-      "Performance": 9,
-      "Outfit": 7,
-      "Stage Presence": 9,
-      "Vocal Ability": 8,
-      "Creativity": 8
+  "marin": {
+    "day1": {
+      "Artist 1": {
+        "Performance": 1,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 2": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 3": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 4": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 5": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 6": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 7": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 8": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 9": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 10": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 11": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 12": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 13": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 14": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 15": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 16": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 17": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 18": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 19": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 20": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 21": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 22": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 23": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 24": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 25": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 26": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 27": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 28": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Artist 29": {
+        "Performance": 0,
+        "Outfit": 0,
+        "Stage Presence": 0,
+        "Vocal Ability": 0,
+        "Creativity": 0
+      },
+      "Gaia - Chiamo io chiami tu": {
+        "Performance": 8,
+        "Outfit": 4,
+        "Stage Presence": 9,
+        "Vocal Ability": 9,
+        "Creativity": 5
+      },
+      "Francesco Gabbani - Viva la vita": {
+        "Performance": 8,
+        "Outfit": 6,
+        "Stage Presence": 7,
+        "Vocal Ability": 9,
+        "Creativity": 7
+      },
+      "Rkomi - Il ritmo delle cose": {
+        "Performance": 5,
+        "Outfit": 5,
+        "Stage Presence": 6,
+        "Vocal Ability": 2,
+        "Creativity": 4
+      },
+      "Noemi - Se t'innamori muori": {
+        "Performance": 9,
+        "Outfit": 10,
+        "Stage Presence": 9,
+        "Vocal Ability": 10,
+        "Creativity": 8
+      },
+      "Irama - Lentamente": {
+        "Performance": 7,
+        "Outfit": 8,
+        "Stage Presence": 6,
+        "Vocal Ability": 7,
+        "Creativity": 7
+      },
+      "Coma_Cose - Cuoricini": {
+        "Performance": 9,
+        "Outfit": 5,
+        "Stage Presence": 8,
+        "Vocal Ability": 9,
+        "Creativity": 8
+      },
+      "Simone Cristicchi - Quando sarai piccola": {
+        "Performance": 2,
+        "Outfit": 2,
+        "Stage Presence": 2,
+        "Vocal Ability": 3,
+        "Creativity": 2
+      },
+      "Marcella Bella - Pelle diamante": {
+        "Outfit": 4,
+        "Stage Presence": 8,
+        "Vocal Ability": 8,
+        "Creativity": 6,
+        "Performance": 7
+      },
+      "Achille Lauro - Incoscienti giovani": {
+        "Performance": 9,
+        "Outfit": 7,
+        "Stage Presence": 9,
+        "Vocal Ability": 8,
+        "Creativity": 8
+      },
+      "Giorgia - La cura per me": {
+        "Vocal Ability": 10,
+        "Outfit": 5,
+        "Performance": 9,
+        "Stage Presence": 8,
+        "Creativity": 8
+      },
+      "Rose Villain - Fuorilegge": {
+        "Creativity": 6,
+        "Vocal Ability": 9,
+        "Stage Presence": 9,
+        "Outfit": 9,
+        "Performance": 9
+      },
+      "Willie Peyote - Grazie ma no grazie": {
+        "Performance": 7,
+        "Outfit": 5,
+        "Stage Presence": 6,
+        "Vocal Ability": 6,
+        "Creativity": 5
+      }
     }
   }
 }
