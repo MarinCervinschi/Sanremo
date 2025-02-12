@@ -17,13 +17,13 @@ export default function Home() {
       </p>
       <div className="hidden sm:grid sm:grid-cols-3 md:grid-cols-6 gap-4 mb-8 ">
         {featuredArtists.map((artist) => (
-          <div key={artist.name} className="flex flex-col items-center w-[150px]">
+          <div key={artist.name} className="flex flex-col items-center w-[125px]">
             <Image
               src={artist.image || "/placeholder.svg"}
               alt={artist.name}
               width={80}
               height={80}
-              className="rounded-full object-cover w-[80px] h-[80px]"
+              className="rounded-full object-cover w-[80px] h-[80px] shadow-lg border-2 border-white dark:border-gray-800 hover:scale-105 transition-transform"
               />
             <p className="text-sm text-center">{artist.name.split('-')[0]}</p>
           </div>

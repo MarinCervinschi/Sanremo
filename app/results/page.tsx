@@ -108,7 +108,7 @@ export default function Results() {
                     alt={artist.name}
                     width={40}
                     height={40}
-                    className="rounded-full object-cover w-[40px] h-[40px]"
+                    className="rounded-full object-cover w-[40px] h-[40px] shadow-lg border-2 border-white dark:border-gray-800"
                   />
                   <span>{artist.name}</span>
                 </div>

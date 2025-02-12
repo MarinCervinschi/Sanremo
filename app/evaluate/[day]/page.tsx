@@ -110,7 +110,7 @@ export default function EvaluateDay() {
                 alt={artist.name}
                 width={100}
                 height={100}
-                className="rounded-full object-cover w-[100px] h-[100px]"
+                className="rounded-full object-cover w-[100px] h-[100px] shadow-lg border-2 border-white dark:border-gray-800 hover:scale-105 transition-transform"
               />
               <CardTitle>{artist.name}</CardTitle>
             </div>
