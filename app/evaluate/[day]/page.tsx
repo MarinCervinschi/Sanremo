@@ -11,6 +11,8 @@ import { artistOrder, Artist} from "@/lib/artistOrder"
 import Image from "next/image"
 
 const criteria = ["Performance", "Outfit", "Stage Presence", "Vocal Ability", "Creativity"]
+const titles = ["Opening 🎆", "First Half 🌓", "Second Half 🌕", "Cover Night 🎙️", "Final 🏆"]
+
 
 export default function EvaluateDay() {
   const { day } = useParams()
@@ -101,7 +103,7 @@ export default function EvaluateDay() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Evaluate Day {day}</h1>
+      <h1 className="text-3xl font-bold mb-6">{titles[Number(day) - 1]}</h1>
       {artistOrder[day as string].map((artist: Artist) => (
         <Card key={artist.name} className="mb-6">
           <CardHeader>
