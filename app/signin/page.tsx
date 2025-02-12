@@ -30,8 +30,7 @@ export default function SignIn() {
         // Store the username and userId in localStorage
         localStorage.setItem("username", username)
         localStorage.setItem("userId", data.userId)
-        router.push("/days")
-        window.location.reload()
+        window.location.href = "/"
       } else {
         const data = await response.json()
         setError(data.error || "An error occurred during sign in")
