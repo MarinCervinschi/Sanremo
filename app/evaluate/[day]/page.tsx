@@ -111,7 +111,7 @@ export default function EvaluateDay() {
                 alt={artist.name}
                 width={100}
                 height={100}
-                className="rounded-full"
+                className="rounded-full object-cover w-[100px] h-[100px]"
               />
               <CardTitle>{artist.name}</CardTitle>
             </div>
