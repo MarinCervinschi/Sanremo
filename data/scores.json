@@ -289,5 +289,142 @@
         "Creativity": 5
       }
     }
+  },
+  "Ilaria": {
+    "day1": {
+      "Gaia - Chiamo io chiami tu": {
+        "Performance": 8,
+        "Outfit": 4,
+        "Stage Presence": 9,
+        "Vocal Ability": 8,
+        "Creativity": 7
+      },
+      "Francesco Gabbani - Viva la vita": {
+        "Performance": 8,
+        "Outfit": 7,
+        "Stage Presence": 8,
+        "Vocal Ability": 8,
+        "Creativity": 7
+      },
+      "Rkomi - Il ritmo delle cose": {
+        "Performance": 3,
+        "Outfit": 5,
+        "Stage Presence": 4,
+        "Vocal Ability": 2,
+        "Creativity": 4
+      },
+      "Noemi - Se t'innamori muori": {
+        "Performance": 9,
+        "Outfit": 10,
+        "Stage Presence": 9,
+        "Vocal Ability": 10,
+        "Creativity": 8
+      },
+      "Irama - Lentamente": {
+        "Performance": 8,
+        "Outfit": 8,
+        "Stage Presence": 8,
+        "Vocal Ability": 8,
+        "Creativity": 6
+      },
+      "Coma_Cose - Cuoricini": {
+        "Performance": 10,
+        "Outfit": 1,
+        "Stage Presence": 10,
+        "Vocal Ability": 8,
+        "Creativity": 10
+      },
+      "Simone Cristicchi - Quando sarai piccola": {
+        "Performance": 4,
+        "Outfit": 6,
+        "Stage Presence": 5,
+        "Vocal Ability": 3,
+        "Creativity": 5
+      },
+      "Marcella Bella - Pelle diamante": {
+        "Performance": 8,
+        "Outfit": 7,
+        "Stage Presence": 9,
+        "Vocal Ability": 6,
+        "Creativity": 8
+      },
+      "Achille Lauro - Incoscienti giovani": {
+        "Performance": 9,
+        "Outfit": 6,
+        "Stage Presence": 10,
+        "Vocal Ability": 8,
+        "Creativity": 7
+      },
+      "Giorgia - La cura per me": {
+        "Performance": 10,
+        "Outfit": 5,
+        "Stage Presence": 9,
+        "Vocal Ability": 10,
+        "Creativity": 7
+      },
+      "Willie Peyote - Grazie ma no grazie": {
+        "Performance": 6,
+        "Outfit": 5,
+        "Stage Presence": 7,
+        "Vocal Ability": 4,
+        "Creativity": 6
+      },
+      "Rose Villain - Fuorilegge": {
+        "Performance": 8,
+        "Outfit": 9,
+        "Stage Presence": 9,
+        "Vocal Ability": 9,
+        "Creativity": 6
+      },
+      "Olly - Balorda nostalgia": {
+        "Performance": 10,
+        "Outfit": 10,
+        "Stage Presence": 10,
+        "Vocal Ability": 10,
+        "Creativity": 10
+      },
+      "Elodie - Dimenticarsi alle 7": {
+        "Performance": 6,
+        "Outfit": 7,
+        "Stage Presence": 8,
+        "Vocal Ability": 8,
+        "Creativity": 5
+      },
+      "Shablo feat Guè, Joshua e Tormento - La mia parola": {
+        "Performance": 1,
+        "Outfit": 1,
+        "Stage Presence": 4,
+        "Vocal Ability": 1,
+        "Creativity": 3
+      },
+      "Massimo Ranieri - Tra le mani un cuore": {
+        "Performance": 6,
+        "Outfit": 6,
+        "Stage Presence": 6,
+        "Vocal Ability": 8,
+        "Creativity": 7
+      },
+      "Tony Effe - Damme 'na mano": {
+        "Performance": 1,
+        "Outfit": 6,
+        "Stage Presence": 4,
+        "Vocal Ability": 2,
+        "Creativity": 5
+      },
+      "Serena Brancale - Anema e core": {
+        "Performance": 4,
+        "Outfit": 9,
+        "Stage Presence": 8,
+        "Vocal Ability": 5,
+        "Creativity": 8
+      },
+      "Fedez - Battito": {
+        "Performance": 7,
+        "Outfit": 6,
+        "Stage Presence": 8,
+        "Vocal Ability": 7,
+        "Creativity": 9
+      }
+    }
   }
 }

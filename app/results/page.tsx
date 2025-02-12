@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@components/ui/tabs"
 import { Loader2 } from "lucide-react"
-import artistOrder from "@/lib/artistOrder"
+import { artistOrder } from "@/lib/artistOrder"
 
 const criteria = ["Performance", "Outfit", "Stage Presence", "Vocal Ability", "Creativity"]
 const days = Array.from({ length: 5 }, (_, i) => `Day ${i + 1}`)
@@ -103,21 +103,21 @@ export default function Results() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
                             {artistOrder[(index + 1).toString()]
                                 .sort((a, b) => {
-                                    const dayScoresA = results[`day${index + 1}`]?.[a] || {}
-                                    const dayScoresB = results[`day${index + 1}`]?.[b] || {}
+                                    const dayScoresA = results[`day${index + 1}`]?.[a.name] || {}
+                                    const dayScoresB = results[`day${index + 1}`]?.[b.name] || {}
                                     const averageScoreA = Object.values(dayScoresA).reduce((acc, score) => acc + score, 0) / criteria.length
                                     const averageScoreB = Object.values(dayScoresB).reduce((acc, score) => acc + score, 0) / criteria.length
                                     return averageScoreB - averageScoreA
                                 })
                                 .map((artist) => {
-                                    const dayScores = results[`day${index + 1}`]?.[artist]
+                                    const dayScores = results[`day${index + 1}`]?.[artist.name]
                                     const averageScore = dayScores
                                         ? Object.values(dayScores).reduce((a, b) => a + b, 0) / criteria.length
                                         : 0
                                     return (
-                                        <Card key={artist}>
+                                        <Card key={artist.name}>
                                             <CardHeader>
-                                                <CardTitle>{artist}</CardTitle>
+                                                <CardTitle>{artist.name}</CardTitle>
                                             </CardHeader>
                                             <CardContent>
                                                 <p className="text-2xl font-bold">{averageScore.toFixed(2)}</p>

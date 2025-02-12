@@ -1,5 +1,8 @@
 {
   "marin": {
     "password": "$2b$10$9zWDhYYXBUuweELkUfG5W.FDCHYcXGqrOSrAliboVPCRb8KLNqokS"
+  },
+  "Ilaria": {
+    "password": "$2b$10$ro7zeagN8v2ukQl3UkjGI.9TANDs9ZT0bS4QMzXxiTjU4bFNTdP/m"
   }
 }

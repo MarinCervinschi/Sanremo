@@ -7,7 +7,8 @@ import { Label } from "@components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@components/ui/card"
 import { Loader2 } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@components/ui/select"
-import artistOrder from "@/lib/artistOrder"
+import { artistOrder, Artist} from "@/lib/artistOrder"
+import Image from "next/image"
 
 const criteria = ["Performance", "Outfit", "Stage Presence", "Vocal Ability", "Creativity"]
 
@@ -27,7 +28,7 @@ export default function EvaluateDay() {
       setUsername(storedUsername)
       fetchScores(storedUsername)
     }
-  }, [username, router]) // Removed unnecessary 'day' dependency
+  }, [router])
 
   const fetchScores = async (username: string) => {
     try {
@@ -48,9 +49,9 @@ export default function EvaluateDay() {
   const initializeScores = () => {
     const initialScores: Record<string, Record<string, number>> = {}
     artistOrder[day as string].forEach((artist) => {
-      initialScores[artist] = {}
+      initialScores[artist.name] = {}
       criteria.forEach((criterion) => {
-        initialScores[artist][criterion] = 0
+        initialScores[artist.name][criterion] = 0
       })
     })
     return initialScores
@@ -101,21 +102,30 @@ export default function EvaluateDay() {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6">Evaluate Day {day}</h1>
-      {artistOrder[day as string].map((artist) => (
-        <Card key={artist} className="mb-6">
+      {artistOrder[day as string].map((artist: Artist) => (
+        <Card key={artist.name} className="mb-6">
           <CardHeader>
-            <CardTitle>{artist}</CardTitle>
+            <div className="flex items-center space-x-4">
+              <Image
+                src={artist.image || "/placeholder.svg"}
+                alt={artist.name}
+                width={100}
+                height={100}
+                className="rounded-full"
+              />
+              <CardTitle>{artist.name}</CardTitle>
+            </div>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {criteria.map((criterion) => (
                 <div key={criterion}>
-                  <Label htmlFor={`${artist}-${criterion}`}>{criterion}</Label>
+                  <Label htmlFor={`${artist.name}-${criterion}`}>{criterion}</Label>
                   <Select
-                    value={scores[artist]?.[criterion]?.toString() || "0"}
-                    onValueChange={(value) => handleScoreChange(artist, criterion, value)}
+                    value={scores[artist.name]?.[criterion]?.toString() || "0"}
+                    onValueChange={(value) => handleScoreChange(artist.name, criterion, value)}
                   >
-                    <SelectTrigger id={`${artist}-${criterion}`}>
+                    <SelectTrigger id={`${artist.name}-${criterion}`}>
                       <SelectValue placeholder="Select a grade" />
                     </SelectTrigger>
                     <SelectContent>
