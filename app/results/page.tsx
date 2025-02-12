@@ -125,7 +125,7 @@ export default function Results() {
     <div>
       <h1 className="text-3xl font-bold mb-6">Results for {username}</h1>
       <Tabs defaultValue="Overall">
-        <TabsList>
+        <TabsList className="flex-inline flex-wrap h-auto">
           <TabsTrigger value="Overall">Overall 💯</TabsTrigger>
           {days.map((day) => (
             <TabsTrigger key={day} value={day}>
