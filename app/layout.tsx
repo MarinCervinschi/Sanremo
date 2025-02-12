@@ -33,6 +33,7 @@ export default function RootLayout({
 
   const handleSignOut = () => {
     localStorage.removeItem("username")
+    localStorage.removeItem("userId")
     setUsername(null)
     router.push("/signin")
   }

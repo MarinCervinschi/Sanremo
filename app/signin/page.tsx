@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@components/ui/button"
 import { Input } from "@components/ui/input"
 import { Label } from "@components/ui/label"
@@ -11,6 +12,7 @@ export default function SignIn() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -24,10 +26,12 @@ export default function SignIn() {
       })
 
       if (response.ok) {
-        // Store the username in localStorage for simplicity
-        // In a real app, you'd use a more secure method like HTTP-only cookies
+        const data = await response.json()
+        // Store the username and userId in localStorage
         localStorage.setItem("username", username)
-        window.location.href = "/days"
+        localStorage.setItem("userId", data.userId)
+        router.push("/days")
+        window.location.reload()
       } else {
         const data = await response.json()
         setError(data.error || "An error occurred during sign in")
@@ -51,7 +55,7 @@ export default function SignIn() {
                 id="username"
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e: any) => setUsername(e.target.value)}
                 required
               />
             </div>
@@ -61,7 +65,7 @@ export default function SignIn() {
                 id="password"
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e: any) => setPassword(e.target.value)}
                 required
               />
             </div>

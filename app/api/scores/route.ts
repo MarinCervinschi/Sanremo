@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server"
-import fs from "fs/promises"
-import path from "path"
-
-const dataFilePath = path.join(process.cwd(), "data", "scores.json")
+import { supabase } from "@/lib/supabase"
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -14,17 +11,37 @@ export async function GET(request: Request) {
   }
 
   try {
-    const fileContents = await fs.readFile(dataFilePath, "utf8")
-    const scores = JSON.parse(fileContents)
+    let query = supabase
+      .from("scores")
+      .select("day, artist, criterion, score, users!inner(username)")
+      .eq("users.username", username)
+
     if (day) {
-      return NextResponse.json(scores[username]?.[`day${day}`] || {})
-    } else {
-      return NextResponse.json(scores[username] || {})
+      query = query.eq("day", Number.parseInt(day))
     }
+
+    const { data, error } = await query
+
+    if (error) {
+      throw error
+    }
+
+    // Transform the data into the structure expected by the frontend
+    const transformedData: Record<string, Record<string, Record<string, number>>> = {}
+    data.forEach((score) => {
+      const dayKey = `day${score.day}`
+      if (!transformedData[dayKey]) {
+        transformedData[dayKey] = {}
+      }
+      if (!transformedData[dayKey][score.artist]) {
+        transformedData[dayKey][score.artist] = {}
+      }
+      transformedData[dayKey][score.artist][score.criterion] = score.score
+    })
+
+    const result = day ? transformedData[`day${day}`] : transformedData
+    return NextResponse.json(result ? result : {})
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      return NextResponse.json({})
-    }
     console.error("Error reading scores:", error)
     return NextResponse.json({ error: "Failed to read scores" }, { status: 500 })
   }
@@ -38,25 +55,48 @@ export async function POST(request: Request) {
   }
 
   try {
-    let allScores: { [key: string]: { [key: string]: any } } = {}
-    try {
-      const fileContents = await fs.readFile(dataFilePath, "utf8")
-      allScores = JSON.parse(fileContents)
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
-        throw error
-      }
+    // Get the user ID
+    const { data: userData, error: userError } = await supabase
+      .from("users")
+      .select("id")
+      .eq("username", username)
+      .single()
+
+    if (userError || !userData) {
+      throw new Error("User not found")
     }
 
-    allScores = {
-      ...allScores,
-      [username]: {
-        ...allScores[username],
-        [`day${day}`]: scores,
-      },
+    const userId = userData.id
+
+    // Prepare the scores data for insertion
+    const scoresToInsert = Object.entries(scores).flatMap(([artist, criteriaScores]) =>
+      Object.entries(criteriaScores as Record<string, number>).map(([criterion, score]) => ({
+        user_id: userId,
+        day: Number.parseInt(day),
+        artist,
+        criterion,
+        score,
+      })),
+    )
+
+    // Delete existing scores for this user and day
+    const { error: deleteError } = await supabase
+      .from("scores")
+      .delete()
+      .eq("user_id", userId)
+      .eq("day", Number.parseInt(day))
+
+    if (deleteError) {
+      throw deleteError
     }
 
-    await fs.writeFile(dataFilePath, JSON.stringify(allScores, null, 2))
+    // Insert new scores
+    const { error: insertError } = await supabase.from("scores").insert(scoresToInsert)
+
+    if (insertError) {
+      throw insertError
+    }
+
     return NextResponse.json({ message: "Scores saved successfully" })
   } catch (error) {
     console.error("Error saving scores:", error)
