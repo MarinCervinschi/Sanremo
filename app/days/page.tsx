@@ -5,7 +5,7 @@ const days = ["Opening 🎆", "First Half 🌓", "Second Half 🌕", "Cover Nigh
 
 export default function DaysList() {
   return (
-    <div>
+    <div className="flex flex-col min-h-[calc(100vh-4rem)] text-center">
       <h1 className="text-3xl font-bold mb-6">What&apos;s goin&apos; on tonight ‼️ </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {days.map((day, index) => (
