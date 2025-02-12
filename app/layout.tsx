@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
 import type React from "react"
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Loader from './components/Loader'
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Inter({
   subsets: ["latin"],
@@ -39,6 +39,7 @@ export default function RootLayout({
         ) : (
           <div className="opacity-0">{children}</div> // Prevent flashing
         )}
+        <Analytics />
       </body>
     </html>
   )
